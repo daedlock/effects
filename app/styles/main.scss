@@ -10,43 +10,67 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 * {
   font-family: "Raleway";
   color: #333333;
+  -webkit-font-smoothing: antialiased !important;
 }
 
-body {
+.thin {
+  font-weight: 200;
+}
 
-  .mockup-content {
-    font-family: "Blokk";
-    line-height: 2em;
-    text-align: center;
-    opacity: .3;
-    font-size: 18px;
-  }
+.mockup-content {
+  font-family: "Blokk";
+  line-height: 2em;
+  text-align: center;
+  opacity: .3;
+  font-size: 18px;
+  width: calc(100% - 210px);
+  margin: 0 auto;
+}
 
-  h1.title {
-    font-weight: 700;
-    letter-spacing: -1px;
-    font-size: 4vw;
-    text-align: center;
-  }
+h1.title {
+  font-weight: 700;
+  letter-spacing: -1px;
+  font-size: 4vw;
+  text-align: center;
+}
 
-  .center {
-    text-align: center;
-  }
+.center {
+  text-align: center;
+}
 
-  .morph {
-    display: inline-block;
-    cursor: pointer;
-    letter-spacing: 2px;
-    background: $pomegranate;
-    padding:20px 40px 20px 40px;
-    font-weight: 600;
-    outline: none;
-    font-size: 1.4em;
+div.button {
+  display: inline-block;
+  border: 1px solid #333;
+  color: #333;
+  box-shadow: none;
+  border-radius: 5px;
+  padding: 15px 25px 15px 25px;
+  cursor: pointer;
+  transition: background .2s ease-out;
+}
+div.button:hover {
+  background: #efefef;
+}
 
-    border:0;
-    color: white;
-    &:hover {
-      color:white;
-    }
-  }
+div.full-modal, div.full-modal.hidden {
+  opacity: 0;
+  z-index: -1;
+  position: fixed;
+  -webkit-transform: scale(.9,.9);
+  background: rgba(255,255,255,1);
+  -webkit-transition: all  .3s ease-out;
+  -moz-transition: all  .3s ease-out;
+  -ms-transition: all  .3s ease-out;
+  -o-transition: all  .3s ease-out;
+  transition: all  .3s ease-out;
+}
+div.full-modal.opened {
+  opacity: 1;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: scale(1,1);
+
+  z-index: 5000;
 }
