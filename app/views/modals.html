@@ -1,16 +1,23 @@
+<h3 class="thin center">Modal Effects Inspirations</h3>
+<hr/>
+
 <div ng-controller="ModalController" >
 
 
-  <div class="full-modal center  {{modalContentState}} {{modalState}}" >
+  <div class="full-modal center  {{modalContentState}} {{modalState}}" ng-click="dismiss()" >
     <div class="container " >
       <h1 class="animated" >Modal Content</h1>
-
+      <hr/>
       <div class="mockup-content ptx animated fadeInUp">
         Kohlrabi radish okra azuki bean corn fava bean mustard tigernut juccama green bean celtuce collard greens
         avocado quandong. Pea horseradish azuki bean lettuce avocado asparagus okra.
 
       </div>
 
+      <hr/>
+      <p class="center medium  thin">
+        Click anywhere to dismiss the modal
+      </p>
 
     </div>
   </div>

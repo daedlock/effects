@@ -41,29 +41,43 @@ h1.title {
 
 div.button {
   display: inline-block;
-  border: 1px solid #333;
-  color: #333;
+  border: 1px solid $greensea;
+  color: $greensea;
   box-shadow: none;
   border-radius: 5px;
   padding: 15px 25px 15px 25px;
   cursor: pointer;
-  transition: background .2s ease-out;
+  transition: all .2s ease-out;
 }
 div.button:hover {
-  background: #efefef;
+  box-shadow: none;
+  border-color: darken($greensea,10%);
+  color: darken($greensea,10%);
+}
+
+div.full-modal {
+  -webkit-transition: all  .3s ease-out;
+  -moz-transition: all  .3s ease-out;
+  -ms-transition: all  .3s ease-out;
+  -o-transition: all  .3s ease-out;
+  transition: all  .3s ease-out;
+
+  h1 {
+    font-weight: 800;
+  }
 }
 
 div.full-modal, div.full-modal.hidden {
   opacity: 0;
   z-index: -1;
   position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   -webkit-transform: scale(.9,.9);
   background: rgba(255,255,255,1);
-  -webkit-transition: all  .3s ease-out;
-  -moz-transition: all  .3s ease-out;
-  -ms-transition: all  .3s ease-out;
-  -o-transition: all  .3s ease-out;
-  transition: all  .3s ease-out;
+
 
 
 
