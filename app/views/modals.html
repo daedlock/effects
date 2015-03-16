@@ -1,7 +1,5 @@
-<h3 class="thin center">Modal Effects Inspirations</h3>
-<hr/>
 
-<div ng-controller="ModalController" >
+<div ng-controller="ModalController" class="modals-page" >
 
 
   <div class="full-modal center  {{modalContentState}} {{modalState}}" ng-click="dismiss()" >
@@ -21,9 +19,21 @@
 
     </div>
   </div>
-  <div class="center ptx"  ng-keyup="keyup()" >
-    <div class="button" ng-click="toggleState()">
-      OPEN MODAL
+  <div class="center container-sm anim-in-out anim-zoom-out"  ng-keyup="keyup()" >
+    <p class="info">
+      Here are some ideas about modal animations and effects, view the examples below
+      by clicking on the buttons to trigger the modal animation.
+    </p>
+    <div class="buttons">
+      <div class="button" ng-click="toggleState()">
+        SCALE
+      </div>
+      <div class="button" ng-click="toggleState()">
+        BOUNCE
+      </div>
+      <div class="button" ng-click="toggleState()">
+        SKEW
+      </div>
     </div>
   </div>
 </div>

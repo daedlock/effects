@@ -10,6 +10,8 @@
   <!-- build:css(.) styles/vendor.css -->
   <!-- bower:css -->
   <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
+  <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
+  <link rel="stylesheet" href="bower_components/angular-ui-router-anim-in-out/css/anim-in-out.css"/>
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
@@ -19,7 +21,22 @@
 <body class="" ng-controller="BodyController">
 
   <div class="container">
-    <h1 class="title ptl">My Playground</h1>
+    <h1 class="title">Playground</h1>
+    <h3 class="thin center">my implementations of UX experimental ideas</h3>
+    <div class="menu">
+      <div class="item" ui-sref-active="active">
+        <a ui-sref="modals">
+          MODAL EFFECTS
+        </a>
+      </div>
+      <div class="item" ui-sref-active="active">
+        <a ui-sref="dummy">
+        HOVER EFFECTS
+      </a></div>
+      <div class="item"><a href="#">
+        INPUT EFFECTS
+      </a></div>
+    </div>
     <div ui-view></div>
 
 
@@ -44,6 +61,10 @@
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/ui-router/release/angular-ui-router.js"></script>
   <script src="bower_components/angular-ui-utils/ui-utils.js"></script>
+  <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="bower_components/angular-ui-router-anim-in-out/anim-in-out.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

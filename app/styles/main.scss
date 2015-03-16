@@ -15,6 +15,11 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 .thin {
   font-weight: 200;
+  font-size: 24px;
+  /* implementations of U: */
+  color: #333333;
+  margin-top: 17px;
+  margin-bottom: 46px;
 }
 
 .mockup-content {
@@ -29,31 +34,63 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 }
 
 h1.title {
+  margin-top: 48px;
   font-weight: 700;
-  letter-spacing: -1px;
-  font-size: 4vw;
+  letter-spacing: -2px;
+  font-size: 48px;
   text-align: center;
+
+}
+
+.menu {
+  width: 550px;
+  margin: 0 auto;
+  display: flex;
+  padding: 0 10px 0 10px;
+  .item {
+    /* MODALS EFFECTS: */
+
+    flex-grow: 1;
+    text-align: center;
+    padding: 15px 0 15px 0;
+    border-top: 1px solid #F0F0F0;
+    border-bottom: 1px solid #F0F0F0;
+    a {
+      font-weight: 400;
+      font-size: 14px;
+      color: rgba(0,0,0,.6);
+      letter-spacing: .1em;
+      text-decoration: none !important;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    &:hover {
+      padding-bottom: 14px;
+      border-bottom: 2px solid rgba(0,0,0,.6);
+    }
+
+    &.active {
+      padding-bottom: 14px;
+
+      a {
+        color: $greensea;
+      }
+
+      border-bottom-width: 2px;
+      border-bottom-color: $greensea;
+
+    }
+
+  }
 }
 
 .center {
   text-align: center;
 }
 
-div.button {
-  display: inline-block;
-  border: 1px solid $greensea;
-  color: $greensea;
-  box-shadow: none;
-  border-radius: 5px;
-  padding: 15px 25px 15px 25px;
-  cursor: pointer;
-  transition: all .2s ease-out;
-}
-div.button:hover {
-  box-shadow: none;
-  border-color: darken($greensea,10%);
-  color: darken($greensea,10%);
-}
+
 
 div.full-modal {
   -webkit-transition: all  .3s ease-out;
@@ -92,4 +129,52 @@ div.full-modal.opened {
   -webkit-transform: scale(1,1);
 
   z-index: 5000;
+}
+
+div.button {
+  display: inline-block;
+  border: 1px solid $greensea;
+  color: $greensea;
+  box-shadow: none;
+  border-radius: 5px;
+  padding: 15px 25px 15px 25px;
+  cursor: pointer;
+  transition: all .2s ease-out;
+}
+div.button:hover {
+  box-shadow: none;
+  border-color: darken($greensea,10%);
+  color: darken($greensea,10%);
+}
+.modals-page {
+  padding-top: 70px;
+
+  p.info {
+    /* Here are some ideas : */
+    font-weight: 200;
+    text-align: center;
+    font-size: 22px;
+    letter-spacing: -1px;
+    color: #333333;
+    line-height: 40px;
+    margin-bottom: 34px;
+  }
+
+  .buttons {
+    display: flex;
+    padding: 0 150px 0 150px;
+
+    justify-content: space-around;
+
+    .button {
+      flex-grow: 1;
+      margin: 0 5px 0 5px;
+      width: 200px;
+    }
+  }
+}
+
+.container-sm {
+  width: 850px;
+  margin:0 auto;
 }

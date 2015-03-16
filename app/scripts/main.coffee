@@ -1,4 +1,4 @@
-app = angular.module "racoon", ["ui.router","ui.keypress","ui.event"]
+app = angular.module "racoon", ["ui.router","ui.keypress","ui.event",'angular-loading-bar', 'ngAnimate', 'anim-in-out']
 
 
 whichTransitionEvent = ->
@@ -15,6 +15,11 @@ whichTransitionEvent = ->
 
 
 
+  app.config ['cfpLoadingBarProvider', (cfpLoadingBarProvider) =>
+    cfpLoadingBarProvider.includeSpinner = false
+    cfpLoadingBarProvider.latencyThreshold = 0;
+
+  ]
 
 app.config ($stateProvider, $urlRouterProvider) ->
   $stateProvider.state('dummy',
