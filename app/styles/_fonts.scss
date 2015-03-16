@@ -1,4 +1,14 @@
 @font-face {
+  font-family: 'Blokk';
+  src: url('fonts/blokk/BLOKKRegular.eot');
+  src: url('fonts/blokk/BLOKKRegular.eot?#iefix') format('embedded-opentype'),
+     url('fonts/blokk/BLOKKRegular.woff') format('woff'),
+     url('fonts/blokk/BLOKKRegular.svg#BLOKKRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Raleway";
   src: url("fonts/raleway/Raleway-Thin.ttf");
   src: url("fonts/raleway/Raleway-Thin.ttf") format("truetype");
