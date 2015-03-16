@@ -1,17 +1,22 @@
-<div class="full-modal center {{modalState}}">
-  <div class="container">
-    <h1>Modal Content</h1>
+<div ng-controller="ModalController" >
 
-    <div class="mockup-content ptx">
-      Kohlrabi radish okra azuki bean corn fava bean mustard tigernut juccama green bean celtuce collard greens avocado quandong. Pea horseradish azuki bean lettuce avocado asparagus okra.
+
+  <div class="full-modal center  {{modalContentState}} {{modalState}}" >
+    <div class="container " >
+      <h1 class="animated" >Modal Content</h1>
+
+      <div class="mockup-content ptx animated fadeInUp">
+        Kohlrabi radish okra azuki bean corn fava bean mustard tigernut juccama green bean celtuce collard greens
+        avocado quandong. Pea horseradish azuki bean lettuce avocado asparagus okra.
+
+      </div>
+
 
     </div>
-
-
   </div>
-</div>
-<div class="center ptx">
-  <div class="button" ng-click="toggleState()">
-    OPEN MODAL
+  <div class="center ptx"  ng-keyup="keyup()" >
+    <div class="button" ng-click="toggleState()">
+      OPEN MODAL
+    </div>
   </div>
 </div>

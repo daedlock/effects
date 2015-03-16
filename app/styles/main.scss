@@ -21,7 +21,8 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   font-family: "Blokk";
   line-height: 2em;
   text-align: center;
-  opacity: .3;
+
+  color: #bbb;
   font-size: 18px;
   width: calc(100% - 210px);
   margin: 0 auto;
@@ -63,7 +64,11 @@ div.full-modal, div.full-modal.hidden {
   -ms-transition: all  .3s ease-out;
   -o-transition: all  .3s ease-out;
   transition: all  .3s ease-out;
+
+
+
 }
+
 div.full-modal.opened {
   opacity: 1;
   top:0;
